@@ -7,6 +7,8 @@ For our needs we need MySQL to be hosted by RDS.
 We need Centos instead of Ubuntu (client requirements).
 And we prefer to use packer instead of Dockerfile to create the image (personal preference and so we can deploy direct to AWS if needed without).
 We also want to make data directories settable via ENV variables so we can mount EBS volumes that we can detach and attach to host that is hosting Docker Host.
+And last but not least, we want to use the latest versions.
+
 
 ## Status of the above changes
 Not started.
@@ -14,15 +16,7 @@ We imported changes from advantageous and docker-statsd-influxdb-grafana.
 
 
 
-## Versions
 
-### Warning, breaking change: upgrade from version 1.0.x of this image is not supported, all persisted data in volumes will be lost if you delete the container.
-
-* Docker Image:      2.0.0
-* Ubuntu:            16.04
-* InfluxDB:          1.2
-* Telegraf (StatsD): 1.2
-* Grafana:           4.1.1
 
 ## Quick Start
 

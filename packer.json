@@ -1,0 +1,36 @@
+{
+  "builders": [
+    {
+      "type": "docker",
+      "image": "centos:7.4.1708",
+      "commit": true
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "resources",
+      "destination" : "/root"
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/000-provision.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    [
+      {
+        "type": "docker-tag",
+        "repository": "cloudurable/statsd-influxdb-grafana",
+        "tag": "0.1"
+      },
+      {
+        "type": "docker-tag",
+        "repository": "cloudurable/statsd-influxdb-grafana",
+        "tag": "latest"
+      }
+    ]
+  ]
+}
