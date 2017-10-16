@@ -35,7 +35,7 @@ pip install supervisor
 
 cd /root/resources/
 mkdir -p /etc/supervisor/conf.d/
-cp supervisord/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+cp supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 
 mkdir -p /var/log/supervisor
 mkdir -p /var/run/sshd
@@ -50,10 +50,15 @@ rm -rf .profile
 mkdir .ssh
 
 cd /root/resources/
+
+echo "setting up ssl"
 cp ssh/id_rsa /root/.ssh/id_rsa
+/usr/bin/ssh-keygen -A
 
 /root/resources/build/mysql_install.sh
 /root/resources/build/install_telegraf.sh
 /root/resources/build/install_influxdb.sh
 /root/resources/build/install_grafana.sh
+
+
 

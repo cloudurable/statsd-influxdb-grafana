@@ -46,3 +46,6 @@ echo "GRANT ALL PRIVILEGES ON *.* TO '${MYSQL_GRAFANA_USER}'@'%' WITH GRANT OPTI
 echo "=> Stopping MySQL ..."
 /usr/bin/mysqladmin stop   -p"${MYSQL_ROOT_PW}"
 
+
+mkdir -p /opt/mysql/bin
+cp mysql/run_mysql.sh  /opt/mysql/bin/

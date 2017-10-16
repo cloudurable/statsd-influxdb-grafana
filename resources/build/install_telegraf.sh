@@ -8,4 +8,3 @@ yum -y localinstall telegraf-${TELEGRAF_VERSION}-1.x86_64.rpm
 cd /root/resources
 
 cp telegraf/telegraf.conf /etc/telegraf/telegraf.conf
-cp telegraf/init.sh /etc/init.d/telegraf

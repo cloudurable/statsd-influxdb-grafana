@@ -45,7 +45,7 @@ RUN apt-get -y update && \
  apt-get install -y nodejs
 
 # Configure Supervisord, SSH and base env
-COPY supervisord/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY supervisord/supervisord.conf /etc/supervisor/supervisord.conf
 
 WORKDIR /root
 
