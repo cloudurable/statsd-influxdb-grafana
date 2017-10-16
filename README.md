@@ -16,34 +16,24 @@ We imported changes from advantageous and docker-statsd-influxdb-grafana.
 
 
 
-## Run and debug
 
-```
-docker run -i -t cloudurable/statsd-influxdb-grafana:0.1  /bin/bash
-```
-
-## Attach
-
-```
-docker -it    exec /bin/bash  16bddecdb33e
-```
 
 ## Quick Start
 
 To start the container the first time launch:
 
 ```sh
-docker run -d \
-  --name docker-statsd-influxdb-grafana \
+docker run --name grafana \
   -p 3003:3003 \
-  -p 3004:8083 \
+  -p 8083:8083 \
   -p 8086:8086 \
   -p 22022:22 \
   -p 8125:8125/udp \
-  advantageous/grafana:latest:latest
+  cloudurable/statsd-influxdb-grafana:latest \
+  /usr/bin/supervisord
 ```
 
-You can replace `latest` with the desired version listed in changelog file.
+You can replace `latest` with the desired version.
 
 To stop the container launch:
 
@@ -63,7 +53,7 @@ docker start grafana
 Host		Container		Service
 
 3003		3003			grafana
-3004		8083			influxdb-admin
+8083		8083			chronograf
 8086		8086			influxdb
 8125		8125			statsd
 22022		22				sshd
@@ -123,11 +113,32 @@ Port: 8086
 ## Build
 
 ```
-docker build -t advantageous/grafana:v1   .
-docker build -t advantageous/grafana:latest  .
+docker build -t cloudurable/grafana:v1   .
+docker build -t cloudurable/grafana:latest  .
 ```
 
 ## Push
 ```
-docker push  advantageous/grafana
+docker push  cloudurable/grafana
+```
+
+
+## Developer  Notes
+## Run and debug
+
+```
+docker run -i -t cloudurable/statsd-influxdb-grafana:0.1  /bin/bash
+```
+
+## Attach
+
+```
+docker exec -it  424761df905b  bash
+
+```
+
+## Ports
+
+```
+netstat -plnt
 ```
