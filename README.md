@@ -16,7 +16,17 @@ We imported changes from advantageous and docker-statsd-influxdb-grafana.
 
 
 
+## Run and debug
 
+```
+docker run -i -t cloudurable/statsd-influxdb-grafana:0.1  /bin/bash
+```
+
+## Attach
+
+```
+docker -it    exec /bin/bash  16bddecdb33e
+```
 
 ## Quick Start
 
