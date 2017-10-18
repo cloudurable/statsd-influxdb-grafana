@@ -142,3 +142,14 @@ docker exec -it  424761df905b  bash
 ```
 netstat -plnt
 ```
+
+## Clean up old images
+```
+docker images | grep none | awk '{print $3}' | xargs docker rmi
+```
+
+## Clean up old containers
+```
+docker ps -a  | awk '{print $1}' | xargs docker stop
+docker ps -a  | grep Exited | awk '{print $1}' | xargs docker rm
+```

@@ -57,9 +57,10 @@ cp ssh/id_rsa /root/.ssh/id_rsa
 
 /root/resources/build/mysql_install.sh
 /root/resources/build/install_telegraf.sh
-/root/resources/build/install_influxdb.sh
 /root/resources/build/install_grafana.sh
 /root/resources/build/install_chronograf.sh
+/root/resources/build/install_influxdb.sh
+
 
 
 

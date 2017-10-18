@@ -47,5 +47,6 @@ echo "=> Stopping MySQL ..."
 /usr/bin/mysqladmin stop   -p"${MYSQL_ROOT_PW}"
 
 
-mkdir -p /opt/mysql/bin
-cp mysql/run_mysql.sh  /opt/mysql/bin/
+mkdir -p /opt/mysql/
+
+
