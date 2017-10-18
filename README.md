@@ -71,7 +71,7 @@ Open <http://localhost:3003>
 
 ```
 Username: root
-Password: root
+Password: grafana
 ```
 
 ### Add data source on Grafana
@@ -95,9 +95,9 @@ Now you are ready to add your first dashboard and launch some query on database.
 
 ## InfluxDB
 
-### Web Interface
+### Web Admin Interface
 
-Open <http://localhost:3004>
+Open <http://localhost:8083>
 
 ```
 Username: root
