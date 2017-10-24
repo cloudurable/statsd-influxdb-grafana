@@ -61,6 +61,7 @@ cp ssh/id_rsa /root/.ssh/id_rsa
 /root/resources/build/install_chronograf.sh
 /root/resources/build/install_influxdb.sh
 
+rm -rf /root/resources/
 
 
 
