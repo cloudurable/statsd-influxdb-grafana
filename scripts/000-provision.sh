@@ -61,7 +61,14 @@ cp ssh/id_rsa /root/.ssh/id_rsa
 /root/resources/build/install_chronograf.sh
 /root/resources/build/install_influxdb.sh
 
+echo "Cleaning up"
 rm -rf /root/resources/
+
+echo "Done with provision bash script"
+
+yum clean all
+rm -rf /var/cache/yum
+
 
 
 

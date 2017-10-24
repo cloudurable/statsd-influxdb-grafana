@@ -156,7 +156,7 @@ docker push  cloudurable/grafana
 ## Run and debug
 
 ```
-docker run -i -t cloudurable/statsd-influxdb-grafana:0.1  /bin/bash
+docker run -i -t cloudurable/statsd-influxdb-grafana:0.4  /bin/bash
 ```
 
 ## Attach

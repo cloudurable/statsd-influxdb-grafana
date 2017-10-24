@@ -24,7 +24,7 @@
       {
         "type": "docker-tag",
         "repository": "cloudurable/statsd-influxdb-grafana",
-        "tag": "0.2"
+        "tag": "0.4"
       },
       "docker-push",
       {
