@@ -4,3 +4,4 @@ MAINTAINER Rick Hightower <richardhightower@gmail.com>
 
 ENTRYPOINT ["/usr/bin/supervisord"]
 
+

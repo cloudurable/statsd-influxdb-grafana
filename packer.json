@@ -26,11 +26,13 @@
         "repository": "cloudurable/statsd-influxdb-grafana",
         "tag": "0.1"
       },
+      "docker-push",
       {
         "type": "docker-tag",
         "repository": "cloudurable/statsd-influxdb-grafana",
         "tag": "latest"
-      }
+      },
+      "docker-push"
     ]
   ]
 }
