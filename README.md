@@ -10,6 +10,7 @@ The source code for this project can be found [Source code](https://github.com/c
 
 ## Docker hub
 
+This docker container is hosted on [docker hub](https://hub.docker.com/r/cloudurable/statsd-influxdb-grafana/).
 
 ## Status of the above changes
 We updated to the latest versions of InfluxDB, Telegraf, Grafana and Chronograf circa October 2017.
